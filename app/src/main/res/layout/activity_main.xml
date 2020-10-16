@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/main_padding"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/button_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="showText"
+        android:text="Show"
+        android:layout_alignParentRight="true"/>
+
+    <EditText
+        android:id="@+id/editText_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:hint="@string/editText_hint"
+        android:imeOptions="actionNext"
+        android:layout_toLeftOf="@id/label_spinner"/>
+
+    <Spinner
+        android:id="@+id/label_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/button_main"
+        android:entries="@array/labels"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/radio_group"
+        android:orientation="vertical"
+        android:layout_below="@id/editText_main"
+        android:layout_marginTop="@dimen/main_padding">
+
+        <RadioButton
+            android:id="@+id/radio_p1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilihan 1"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/radio_p2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilihan 2"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/radio_p3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilihan 3"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button_alert"
+        android:layout_below="@id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/main_padding"
+        android:text="Alert!"
+        android:onClick="showAlert"/>
+
+    <TextView
+        android:id="@+id/textPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
